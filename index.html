@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Product Tasks</title>
+
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Included for github, twitter/x and youtube icons -->
+    </head>
+
+    <!-- Requirement 5 -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-links">
+                <a href="https://github.com/joe34441" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://x.com" target="_blank" aria-label="X"> <i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Requirement 1 -->
+        <form id="taskForm">
+            <div class="form-group">
+                <label for="productStatusId">Product Status ID :</label>
+                <input type="text" id="productStatusId" placeholder="Enter Product Status ID">
+                <span style="color: rgb(95, 0, 140); font-size: 12px;">* Provided Status ID : 1043</span> <!-- Text displaying the provided product status ID -->
+                <div id="error" class="error-message"></div>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+
+        <!-- Requirement 12 option b -->
+        <div id="dataModal" class="modal">
+            <div class="modal-content">
+                <h2>Task Data</h2>
+                <p>&nbsp;</p> <!-- Spacing -->
+                <div class="data-container">
+                    <h3 id="totalCost">Total Cost: </h3>
+                    <!-- Table to display tasks data -->
+                    <table id="taskTable" border="1" cellpadding="10" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr>
+                                <th>Task ID</th>
+                                <th>Product Name</th>
+                                <th>Cost</th>
+                                <th>Date Ordered</th>
+                                <th>Cancelled</th>
+                                <th>Status</th>
+                                <th>Task Users</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody> <!-- Table rows will be output here -->
+                    </table>
+                </div>
+                <!-- Requirement 14 -->
+                <label class="button-close">Close</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Requirement 4 -->
+    <img src="images/CornerImage.png" alt="Corner Image" class="bottom-right-image">
+
+    <script src="script.js"></script>
+</html>
